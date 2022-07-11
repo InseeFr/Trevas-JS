@@ -8,16 +8,12 @@
 	},
 	"license": "MIT",
 	"author": "INSEE (http://www.insee.fr)",
-	"main": "lib/index.js",
-	"types": "lib/index.d.ts",
+	"main": "src/index.js",
 	"files": [
-		"lib"
+		"src"
 	],
 	"scripts": {
-		"build-grammar": "antlr4-tool -l JavaScript ../../vtl-sources/Vtl-2.0/Vtl.g4 -o src",
-		"build": "rollup -c rollup.config.js",
-		"prepublishOnly": "npm run build",
-		"analyze": "yarn build && source-map-explorer lib/index.js --html bundle-report/vtl-2.0-antlr-tools.html"
+		"build-grammar": "antlr4-tool -l JavaScript ../../vtl-sources/Vtl-2.0/Vtl.g4 -o src"
 	},
 	"dependencies": {
 		"antlr4": "4.8.0"

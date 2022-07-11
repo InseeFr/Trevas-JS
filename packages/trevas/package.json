@@ -8,16 +8,13 @@
 	},
 	"license": "MIT",
 	"author": "INSEE (http://www.insee.fr)",
-	"main": "lib/index.js",
-	"module": "lib/index.es.js",
+	"main": "src/index.js",
 	"files": [
-		"lib"
+		"src"
 	],
 	"scripts": {
-		"build": "rollup -c rollup.config.js",
 		"test": "cross-env NODE_PATH=src/ jest",
-		"prepublishOnly": "npm run test && npm run build",
-		"analyze": "yarn build && source-map-explorer lib/index.js --html bundle-report/trevas.html"
+		"prepublishOnly": "npm run test"
 	},
 	"jest": {
 		"transform": {
