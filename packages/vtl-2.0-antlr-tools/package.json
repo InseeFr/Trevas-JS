@@ -16,7 +16,7 @@
 		"build-grammar": "antlr4-tool -l JavaScript ../../vtl-sources/Vtl-2.0/Vtl.g4 -o src"
 	},
 	"dependencies": {
-		"antlr4": "4.8.0"
+		"antlr4": "4.10.1"
 	},
 	"devDependencies": {
 		"antlr4-tool": "^1.1.1"
