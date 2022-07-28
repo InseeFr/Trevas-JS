@@ -1,6 +1,6 @@
 {
 	"name": "@inseefr/vtl-2.0-antlr-tools",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"description": "JavaScript tools for the [Validation and Transformation Language](https://sdmx.org/?page_id=5096)",
 	"repository": {
 		"type": "git",
@@ -15,7 +15,7 @@
 	"scripts": {
 		"build-grammar": "antlr4-tool -l JavaScript ../../vtl-sources/Vtl-2.0/Vtl.g4 -o src",
 		"build": "babel src --out-dir lib --copy-files",
-		"prepublish": "npm build-grammar && npm run build"
+		"prepublish": "npm run build-grammar && npm run build"
 	},
 	"dependencies": {
 		"antlr4": "4.10.1"

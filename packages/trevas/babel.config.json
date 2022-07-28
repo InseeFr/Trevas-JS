@@ -1,25 +1,23 @@
 {
-	"presets": [
-		["@babel/preset-env", { "modules": false }],
-		"@babel/preset-react"
-	],
+	"presets": ["@babel/preset-env"],
 	"plugins": [
-		"@babel/plugin-proposal-class-properties",
-		"@babel/plugin-proposal-object-rest-spread",
-		"@babel/plugin-syntax-dynamic-import"
+		["@babel/plugin-proposal-class-properties", { "loose": true }],
+		["@babel/plugin-proposal-private-methods", { "loose": true }],
+		["@babel/plugin-proposal-private-property-in-object", { "loose": true }],
+		"@babel/plugin-proposal-object-rest-spread"
 	],
 	"env": {
 		"test": {
-			"presets": [
-				[
-					"@babel/preset-env",
-					{ "modules": "commonjs", "useBuiltIns": "usage", "corejs": "3.6" }
-				],
-				"@babel/preset-react"
-			],
+			"presets": [["@babel/preset-env", { "modules": "commonjs" }]],
 			"plugins": [
-				"@babel/plugin-proposal-class-properties",
-				"@babel/plugin-transform-modules-commonjs"
+				["@babel/plugin-proposal-class-properties", { "loose": true }],
+				["@babel/plugin-proposal-private-methods", { "loose": true }],
+				[
+					"@babel/plugin-proposal-private-property-in-object",
+					{ "loose": true }
+				],
+				"@babel/plugin-transform-modules-commonjs",
+				["@babel/plugin-transform-runtime", { "regenerator": true }]
 			]
 		}
 	}
